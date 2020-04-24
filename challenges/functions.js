@@ -6,7 +6,19 @@
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
-
+// function consume(a, b, cb) {
+//   return cb(a, b)
+// }
+const consume = (a, b, cb) => cb(a,b)
+const add = (a,b) => {
+  return a + b;
+}
+const multiply = (a,b) =>{
+  return a * b;
+}
+const greeting = (a,b) =>{
+  return `Hello ${a} ${b}, nice to meet you!`
+}
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -26,7 +38,7 @@
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
-
+//because closure allows the ability to put functions together and to access functions from a parent level scope in a child level scope.
 
 const external = "I'm outside the function";
 
